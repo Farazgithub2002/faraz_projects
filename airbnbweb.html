@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Airbnb clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://fontawesome.com/search?q=stars&o=r"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #banner {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 80px;
+        padding-right: 80px;
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+      }
+
+      #left {
+        padding-top: 22px;
+        padding-bottom: 20px;
+        color: #222222;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      #right {
+        width: 18%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        color: #222222;
+      }
+
+      #banner_img {
+        width: 53px;
+        height: 30px;
+        border-radius: 7px;
+      }
+
+      #navbar {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      #logo {
+      }
+
+      #middle-section {
+        width: 25%;
+        border: 1px solid #dddddd;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 40px;
+      }
+
+      #right-section {
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #search {
+        font-size: 15px;
+        color: white;
+        background-color: #ff385c;
+        padding: 5px;
+        border-radius: 50%;
+      }
+      #week {
+        border-left: 1px solid #dddddd;
+        border-right: 1px solid #dddddd;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      #acc {
+        border: 1px solid #dddddd;
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+      #category {
+        display: flex;
+        padding-left: 80px;
+        padding-right: 80px;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      #category img {
+        height: 24px;
+        width: 24px;
+      }
+
+      #category > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #cards {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        padding-left: 80px;
+        padding-right: 80px;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      #cards > div {
+        position: relative;
+      }
+
+      #cards img {
+        width: 100%;
+      }
+
+      #star {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      img + #star ~ p {
+        margin-top: -10px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      #rounded-heart {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="left">Rooms and 50+ features</div>
+      <div id="right">
+        <img
+          id="banner_img"
+          src="https://a0.muscache.com/im/pictures/420c6e43-7896-4617-9ff4-ad05eb1f03f8.jpg?im_q=highq&im_w=240"
+          alt=""
+        />
+        <p>Play the Rooms film</p>
+        <p>Learn More</p>
+      </div>
+    </div>
+
+    <!-- Second section -->
+    <div id="navbar">
+      <div id="logo">
+        <img
+          height="64px"
+          width="118px"
+          src="https://1000logos.net/wp-content/uploads/2023/01/Airbnb-logo-768x432.png"
+          alt=""
+        />
+      </div>
+      <div id="middle-section">
+        <p>Anywhere</p>
+        <p id="week">Any week</p>
+        <p>Add guests</p>
+        <i id="search" class="fas fa-search search-icon"></i>
+      </div>
+      <div id="right-section">
+        <p>Airbnb your home</p>
+        <i class="fas fa-globe"></i>
+        <div id="acc">
+          <i class="fas fa-bars"></i>
+          <i class="far fa-user"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories section -->
+    <div id="category">
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
+          alt=""
+        />
+        <p>Rooms</p>
+      </div>
+      <div>
+        <i id="greater" class="fas fa-chevron-circle-right"></i>
+      </div>
+      <div>
+        <p>Total price</p>
+      </div>
+    </div>
+
+    <div id="cards">
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+        <i id="rounded-heart" class="fas fa-heart heart"></i>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+      <div>
+        <img
+          src="https://a0.muscache.com/im/pictures/miso/Hosting-2694793/original/a6d39bc6-9564-4503-8b84-c796ecda03af.jpeg?im_w=720"
+          alt=""
+        />
+        <div id="star">
+          <p>Surry Hills, Australia</p>
+          <img src="https://fontawesome.com/icons/star?f=classic&s=thin"
+          />
+          <p>4.92</p>
+        </div>
+        <p>Stay with Bron. Business owner</p>
+        <p>26 Jul - 1 Aug</p>
+        <p>$8761 night</p>
+      </div>
+    </div>
+    <footer>
+        <p>Hotel: airnb</p>
+        <p><a href="mailto:hege@example.com">airnb@gmail.com</a></p>
+      </footer>
+    
+  </body>
+</html>
